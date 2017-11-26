@@ -1,0 +1,25 @@
+<h1>Detail</h1>
+
+<div *ngFor="let hero of results">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{hero._id}}</div>
+  <div>
+    <label>name:
+      <input type="text" [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+    <br> <label>Kana:
+        <select name="kana" [(ngModel)]="hero.kana">
+            <option>
+                {{ hero.kana }}
+              </option>
+            <option *ngFor="let state of results2">
+              {{ state.kana }}
+            </option></select>
+      </label><br>
+    <label>phone number:
+        <input type="text" [(ngModel)]="hero.number" placeholder="phone number"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save(hero)">save</button>
+</div>

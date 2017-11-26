@@ -1,0 +1,21 @@
+<h1>Add People</h1>
+<div>
+    <label>name:
+      <input type="text" [(ngModel)]="name" placeholder="name"/>
+    </label>
+    <br>
+    <label>Kana:
+        <select name="kana" [(ngModel)]="kana">
+            <option [ngValue]="null">Select Category</option>
+            <option *ngFor="let state of results">
+              {{ state.kana }}
+            </option></select>
+      </label>
+    <br>
+    <label>Phone number:
+        <input type="text" [(ngModel)]="number" placeholder="Phone number"/>
+    </label>
+  </div>
+
+  <button (click)="goBack()">go back</button>
+  <button (click)="adduser()">Add</button>

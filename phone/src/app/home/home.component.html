@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<!-- <ul>
+    <li *ngFor="let item of results">{{item.name}}</li>
+</ul> -->
+
+<ul class="heroes">
+        <li *ngFor="let hero of results">
+          <a routerLink="/saka/{{hero.kana}}">
+           {{hero.kana}}
+          </a>
+          <button class="delete" title="delete hero"
+          (click)="delete(hero)">x</button>
+        </li>
+</ul>

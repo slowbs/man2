@@ -1,0 +1,13 @@
+<h1>Saka</h1>
+<!-- <ul>
+    <li *ngFor="let item of results">{{item.name}}</li>
+</ul> -->
+
+<ul class="heroes">
+        <li *ngFor="let hero of results">
+          <a routerLink="/detail/{{hero._id}}">
+            {{hero.name}}</a><button class="delete" title="delete hero"
+            (click)="delete(hero)">x</button> &emsp;{{hero.number}}
+          
+        </li>
+</ul>
